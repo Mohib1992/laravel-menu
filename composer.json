@@ -1,0 +1,53 @@
+{
+    "name": "mohib/menu",
+    "description": "Flexible, secure menu system for Laravel applications with fluent builder and XSS protection",
+    "type": "library",
+    "keywords": ["laravel", "menu", "navigation", "builder", "security", "accessible"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohib Ullah",
+            "email": "mohib@example.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/contracts": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/view": "^9.0|^10.0|^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.0|^8.0|^9.0",
+        "phpunit/phpunit": "^9.0|^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mohib\\Menu\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mohib\\Menu\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mohib\\Menu\\MenuServiceProvider"
+            ],
+            "aliases": {
+                "Menu": "Mohib\\Menu\\Facades\\Menu"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    }
+}
